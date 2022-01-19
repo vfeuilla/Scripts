@@ -7,7 +7,7 @@
         "start-value-enumeration": "0",
         "end-value-enumeration": "-1",
         "step-value-enumeration": "1",
-        "aod-file": "AO2D_pp_LHC18b_Run2Converted.root"
+        "aod-file": "AO2D_pp_285396.root"
     },
     "internal-dpl-aod-spawner": "",
     "internal-dpl-aod-index-builder": "",
@@ -84,18 +84,30 @@
         "isRun3": "false"
     },
     "d-q-barrel-track-selection-task": {
-        "cfgBarrelTrackCuts": "jpsiPID2"
+        "cfgBarrelTrackCuts": "jpsiPID2",
+        "processDQTrackSelection": "true",
+        "processDQDummy": "false"
     },
     "d-q-event-selection-task": {
-        "cfgEventCuts": "eventStandard"
+        "cfgEventCuts": "eventStandard",
+        "processDQEventSelection": "true",
+        "processDQDummy": "false"
     },
     "d-q-muons-selection": {
-        "cfgMuonsCuts": "muonQualityCuts"
+        "cfgMuonsCuts": "muonQualityCuts",
+        "processDQMuonSelection": "true",
+        "processDummy": "false"
     },
     "d-q-filter-p-p-task": {
         "cfgBarrelTrackCuts": "jpsiPID2",
         "cfgMuonCuts": "muonQualityCuts",
-        "cfgPairCuts": "pairMassLow,pairJpsi"
+        "cfgPairCuts": "pairMassLow,pairJpsi",
+        "processDQFilterPP": "true",
+        "processDummy": "false"
+    },
+    "d-q-central-filter-p-p-task": {
+        "processCentralDQFilterPP": "true",
+        "processDummy": "false"
     },
     "internal-dpl-aod-global-analysis-file-sink": "",
     "internal-dpl-aod-writer": ""
